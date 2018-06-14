@@ -1,17 +1,16 @@
-ggplot(vantazh, aes(y=X2013, x=reorder(type, -X2013)))+geom_bar(stat="identity", fill="#da2028", width=.5)+theme_bw()+
+ggplot(vantazh, aes(y=y2013, x=reorder(type, -y2013)))+geom_bar(stat="identity", fill="#da2028", width=.5)+
   xlab("Види транспорту")+
   ylab("Одиниці")+
-  ggtitle("Вантажоперевезення за видами транспорту")+
-  labs(subtitle="Відповідні одиниці", caption="Дані з data.gov.ua")+
-  guides(color=guide_legend(title="заголовок легенди"))+
+  ggtitle("Заголовок")+
+  labs(subtitle="Підзаголовок", caption="Дані з data.gov.ua")+
   theme(
-    plot.title = element_text(size=20, family="Roboto", face="bold", colour = "#515151"),
-    plot.subtitle = element_text(size=16, family="Roboto", color= "#515151", vjust=2),
+    plot.title = element_text(size=20, family="Roboto", face="bold", colour = "#515151", margin=margin(0,0,10,0)),
+    plot.subtitle = element_text(size=16, family="Roboto", color= "#515151", margin=margin(0,0,25,0)),
     plot.caption = element_text(size=12, family="Roboto", color="#515151", face="italic"),
     panel.border=element_blank(),
     panel.background = element_rect(fill = "#ffffff"),
     plot.background = element_rect(fill = "#ffffff"),
-    axis.title=element_text(size=12, family="Roboto", colour = "#515151"),
+    axis.title.x=element_text(size=12, family="Roboto", colour = "#515151", margin=margin(15,0,0,0)),axis.title.y=element_text(size=12, family="Roboto", colour = "#515151", margin=margin(0,10,0,0)),
     axis.ticks=element_blank(),
     axis.text=element_text(size=10, family="Roboto", colour = "#515151"),
     panel.grid.major = element_line(colour = "#E8DCDC", size=.2),
