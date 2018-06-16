@@ -1,9 +1,10 @@
-ggplot(vantazh, aes(y=y2013, x=reorder(type, -y2013)))+geom_bar(stat="identity", fill="#da2028", width=.5)+
+ggplot(vytraty, aes(y=y2013, x=reorder(type, -y2013)))+geom_bar(stat="identity", fill="#da2028", width=.5)+
   xlab("Види транспорту")+
   ylab("Одиниці")+
   ggtitle("Заголовок")+
   labs(subtitle="Підзаголовок", caption="Дані з data.gov.ua")+
   theme(
+    legend.title=element_blank(),
     plot.title = element_text(size=20, family="Roboto", face="bold", colour = "#515151", margin=margin(0,0,10,0)),
     plot.subtitle = element_text(size=16, family="Roboto", color= "#515151", margin=margin(0,0,25,0)),
     plot.caption = element_text(size=12, family="Roboto", color="#515151", face="italic"),
@@ -19,13 +20,12 @@ ggplot(vantazh, aes(y=y2013, x=reorder(type, -y2013)))+geom_bar(stat="identity",
   )
 
 ggplot(salary, aes(x=dek))+geom_histogram(binwidth=500, col="white", fill="#da2028")+theme_bw()+
-  xlab("Види транспорту")+
-  ggtitle("Розподіл зарплат деканів в університетах")+
+  ggtitle("Розподіл зарплат декані\nв в університетах")+
   labs(caption="Дані від Стадного")+
-  guides(color=guide_legend(title="заголовок легенди"))+
   theme(
-    plot.title = element_text(size=20, family="Roboto", face="bold", colour = "#515151",vjust=2),
-    plot.caption = element_text(size=12, family="Roboto", color="#515151", face="italic"),
+    plot.title = element_text(size=20, family="Roboto", face="bold", colour = "#515151", margin=margin(0,0,10,0)),
+    plot.subtitle = element_text(size=16, family="Roboto", color= "#515151", margin=margin(0,0,25,0)),
+    plot.caption = element_text(size=12, family="Roboto", color="#515151", face="italic", margin=margin(15,0,0,0)),
     panel.border=element_blank(),
     panel.background = element_rect(fill = "#ffffff"),
     plot.background = element_rect(fill = "#ffffff"),
