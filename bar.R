@@ -1,4 +1,4 @@
-ggplot(vytraty, aes(y=y2013, x=reorder(type, -y2013)))+geom_bar(stat="identity", fill="#da2028", width=.5)+
+ggplot(vantazh, aes(y=y2013, x=reorder(type, -y2013)))+geom_bar(stat="identity", fill="#da2028", width=.5)+
   xlab("Види транспорту")+
   ylab("Одиниці")+
   ggtitle("Заголовок")+
